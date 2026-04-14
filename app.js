@@ -16,11 +16,11 @@ let questions = {
   tech: [
     { q: "AI stands for?", options: ["Artificial Intelligence","Auto Input","Advanced Internet","None"], answer: 0 },
     { q: "HTML is?", options: ["Programming Language","Markup Language","Database","OS"], answer: 1 },
-    { q: "Brain of computer?", options: ["RAM","CPU","Hard Disk","GPU"], answer: 1 },
-    { q: "5G is related to?", options: ["Internet","Network","AI","Storage"], answer: 1 },
-    { q: "Python is?", options: ["Snake","Language","Hardware","Browser"], answer: 1 },
-    { q: "Cloud computing means?", options: ["Weather","Online storage","CPU","GPU"], answer: 1 },
-    { q: "Which is NOT programming language?", options: ["Java","HTML","Python","C++"], answer: 1 },
+    { q: "Time complexity of binary search?", options: ["O(n)","O(log n)","O(n^2)","O(1)"], answer: 1 },
+    { q: "Which protocol is used for secure web communication?", options: ["HTTP","FTP","HTTPS","SMTP"], answer: 2 },
+    { q: "Which data structure uses FIFO?", options: ["Stack","Queue","Tree","Graph"], answer: 1 },
+    { q: "Which layer does IP work on?", options: ["Transport","Application","Network","Data Link"], answer: 2 },
+    { q: "What is RAM?", options: ["Permanent memory","Volatile memory","Cache","Storage"], answer: 1 } ,  
     { q: "Full form of URL?", options: ["Uniform Resource Locator","Universal Resource Link","User Resource Link","None"], answer: 0 },
     { q: "Database example?", options: ["MySQL","HTML","CSS","JS"], answer: 0 },
     { q: "AI chatbot example?", options: ["Google","ChatGPT","Windows","Linux"], answer: 1 }
@@ -42,8 +42,8 @@ function startQuiz(category) {
 
 function loadQuestion() {
   let q = currentQuiz[currentIndex];
-  document.getElementById("question").innerText = q.q;
-
+document.getElementById("question").innerText =
+  `Q${currentIndex + 1}: ` + q.q;
   let optionsHTML = "";
   q.options.forEach((opt, i) => {
     optionsHTML += `<button onclick="checkAnswer(${i})">${opt}</button>`;
@@ -55,6 +55,8 @@ function loadQuestion() {
 
   document.getElementById("feedback").innerText = 
   `Question ${currentIndex + 1} of ${currentQuiz.length}`;
+  let progress = ((currentIndex) / currentQuiz.length) * 100;
+document.getElementById("progressBar").style.width = progress + "%";
 }
 
 function checkAnswer(selected) {
