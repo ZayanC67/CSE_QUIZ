@@ -1,55 +1,85 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: white;
-  text-align: center;
   margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ff9933, #ffffff, #138808);
+  color: #222;
+  text-align: center;
 }
 
 .container {
-  max-width: 400px;
+  max-width: 420px;
   margin: auto;
   padding: 20px;
 }
 
+/* TITLE */
 h1 {
-  margin-bottom: 20px;
+  color: #8B0000;
+  font-size: 28px;
+  margin-bottom: 5px;
 }
 
+p {
+  font-weight: 500;
+}
+
+/* CARD STYLE */
+#quiz-box, #score-box {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* BUTTONS */
 button {
   padding: 14px;
-  margin: 10px 0;
+  margin: 8px 0;
   width: 100%;
   border: none;
   border-radius: 10px;
-  background: #00c6ff;
   font-size: 16px;
-  color: black;
   font-weight: bold;
   cursor: pointer;
+  background: linear-gradient(45deg, #ff5722, #ff9800);
+  color: white;
   transition: 0.2s;
 }
 
 button:hover {
   transform: scale(1.05);
-  background: #00a2d3;
+  background: linear-gradient(45deg, #e64a19, #f57c00);
 }
 
-#quiz-box {
-  background: rgba(255,255,255,0.1);
-  padding: 20px;
-  border-radius: 15px;
+/* CATEGORY BUTTONS */
+#category-box button {
+  background: linear-gradient(45deg, #00695c, #26a69a);
 }
 
+/* FEEDBACK */
 #feedback {
-  margin-top: 10px;
+  margin-top: 12px;
   font-weight: bold;
+  color: #4e342e;
   white-space: pre-line;
-  margin-top: 10px;
-  color: #ffd369;
-
 }
 
+/* PROGRESS BAR */
+#progress {
+  height: 8px;
+  background: #ddd;
+  border-radius: 5px;
+  margin-bottom: 12px;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #ff9933, #138808);
+  border-radius: 5px;
+}
+
+/* HIDE */
 .hidden {
   display: none;
 }
