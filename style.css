@@ -44,6 +44,10 @@ button:hover {
 #feedback {
   margin-top: 10px;
   font-weight: bold;
+  white-space: pre-line;
+  margin-top: 10px;
+  color: #ffd369;
+
 }
 
 .hidden {
