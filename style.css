@@ -1,54 +1,107 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #ff9933, #ffffff, #138808);
   color: #222;
   text-align: center;
+
+  /* FIXED SMOOTH GRADIENT */
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    #ff9933 0%,
+    #ffcc80 20%,
+    #ffffff 40%,
+    #d0f0c0 70%,
+    #138808 100%
+  );
+
+  background-attachment: fixed;
 }
+
+
+/* TITLE */
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.emoji {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.dept {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #6d4c41;
+  margin-bottom: 5px;
+}
+
+.title {
+  font-size: 30px;
+  color: #8B0000;
+  margin: 5px 0;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
 
 .container {
   max-width: 420px;
   margin: auto;
   padding: 20px;
-}
+  max-width: 420px;
+  margin: auto;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-/* TITLE */
-h1 {
-  color: #8B0000;
-  font-size: 28px;
-  margin-bottom: 5px;
-}
-
-p {
-  font-weight: 500;
 }
 
 /* CARD STYLE */
 #quiz-box, #score-box {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  background: rgba(255, 255, 255, 0.15); /* light glass */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-radius: 20px;
+  padding: 25px;
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+
+  margin-top: 20px;
 }
 
 /* BUTTONS */
 button {
   padding: 14px;
-  margin: 8px 0;
-  width: 100%;
+  margin: 10px auto;
+  width: 80%;              /* 🔥 NOT full width */
+  max-width: 300px;        /* keeps it neat on desktop */
+  display: block;
+
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
+
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  background: linear-gradient(45deg, #ff5722, #ff9800);
+
+  background: linear-gradient(45deg, #00695c, #26a69a);
   color: white;
+
   transition: 0.2s;
 }
 
 button:hover {
   transform: scale(1.05);
-  background: linear-gradient(45deg, #e64a19, #f57c00);
+  background: linear-gradient(45deg, #004d40, #1de9b6);
 }
 
 /* CATEGORY BUTTONS */

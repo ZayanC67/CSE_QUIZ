@@ -187,6 +187,10 @@ function checkAnswer(selected) {
   }
 
   document.getElementById("nextBtn").classList.remove("hidden");
+  document.getElementById("nextBtn").scrollIntoView({ 
+  behavior: "smooth",
+  block: "center"
+});
 }
 
 function nextQuestion() {
